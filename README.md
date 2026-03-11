@@ -1,7 +1,5 @@
 # Institute Gate Pass System
->Aarya Bhave
->Ayush Sadavarte
->Jalaja Utekar
+>Contributors: Aarya Bhave, Ayush Sadavarte, Jalaja Utekar
 
 An automated security solution designed to replace manual visitor logs with a digital, QR-code-based verification system.
 
