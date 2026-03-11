@@ -6,10 +6,10 @@ An automated security solution designed to replace manual visitor logs with a di
 ## Overview
 The Campus Digital Gate Pass System streamlines the entry and exit process for visitors and event attendees. By automating identity verification, the system reduces security lapses, eliminates manual paper records, and assists security personnel in managing high-traffic periods such as inter-college events.
 ### Key Objectives
-Pre-registration: Enable visitors to register before arrival.
-\Digital Passes: Generate time-bound, QR-code-based digital gate passes.
-\Digital Verification: Allow security staff to scan and verify passes instantly at the gate.
-\Audit & Safety: Maintain centralized digital logs of all visitor movements.
+Pre-registration: Enable visitors to register before arrival.<br>
+Digital Passes: Generate time-bound, QR-code-based digital gate passes.<br>
+Digital Verification: Allow security staff to scan and verify passes instantly at the gate.<br>
+Audit & Safety: Maintain centralized digital logs of all visitor movements.<br>
 
 ## Features
 ### Visitor Management
