@@ -1,0 +1,31 @@
+Design and develop a Campus Digital Gate Pass & Visitor Management System                                                                                 
+
+1)Design and Development – Develop a Campus Digital Gate Pass & Visitor Management System to replace manual visitor registers with a secure digital system.
+
+
+2)Visitor Information Management – Record visitor details such as name, contact number, ID proof, purpose of visit, host details (faculty/student), visit date and time.
+
+
+3)Digital Approval and Entry–Exit Tracking – Provide digital approval for visits and track visitor entry and exit status in real time.
+
+
+4)Monitoring and Record Management – Allow security staff and administrators to monitor visitors inside the campus and manage records through a centralized database.
+
+
+5)Report Generation and Security Control – Generate reports for security and administrative purposes while handling cases like missing exit entries, repeat visitors, and emergency visitor tracing.
+
+
+Turn on screen reader support
+To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash
+
+
+
+Working of point 2:
+Make a UI to input the visitor details
+
+Working of point 3:
+Digital approval can be provided by sending sms/whatsapp msg etc.
+Can embedd computer vision to track the entry exit of the user
+
+Working of point 4:
+Maintain a seperate DB for the visitors still present inside
