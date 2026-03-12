@@ -1,0 +1,143 @@
+.register-page {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    background: #F5F5F5;
+    min-height: calc(100vh - 60px);
+}
+
+.register-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 35px 40px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.register-header h1 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.register-header p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.register-error {
+    background: #FFEBEE;
+    color: #D32F2F;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #FFCDD2;
+}
+
+.register-success {
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #C8E6C9;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.register-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.register-form .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.register-form .form-group input,
+.register-form .form-group select,
+.register-form .form-group textarea {
+    padding: 10px 12px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    background: #FAFAFA;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.register-form .form-group input:focus,
+.register-form .form-group select:focus,
+.register-form .form-group textarea:focus {
+    border-color: #D32F2F;
+    background: white;
+}
+
+.file-input {
+    padding: 8px !important;
+}
+
+.register-btn {
+    background: #D32F2F;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 5px;
+}
+
+.register-btn:hover {
+    background: #B71C1C;
+    transform: translateY(-1px);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+.register-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .register-card {
+        padding: 20px;
+    }
+}
