@@ -1,0 +1,22 @@
+:root {
+    --red-primary: #D32F2F;
+    --red-dark: #B71C1C;
+    --red-light: #FFEBEE;
+    --grey-dark: #333333;
+    --grey-medium: #666666;
+    --grey-light: #F5F5F5;
+    --grey-border: #E0E0E0;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
