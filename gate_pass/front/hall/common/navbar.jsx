@@ -10,7 +10,6 @@ const Navbar = () => {
 
             <div className="nav-right">
                 <Link to="/login" className="nav-link">Login</Link>
-                {/* MMCOE Logo */}
                 <img src="https://mmcoe.edu.in/wp-content/uploads/2024/09/mmcoe_newlogo-3.png" alt="MMCOE Logo" className="nav-logo" />
             </div>
         </nav>
