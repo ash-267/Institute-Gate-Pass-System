@@ -1,14 +1,21 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import API_BASE from '../api'
+import DEPARTMENTS from '../departmentData'
 import './HostApproval.css'
 
 const HostApproval = () => {
     const [pendingRequests, setPendingRequests] = useState([])
     const [processedList, setProcessedList] = useState([])
+    const navigate = useNavigate()
 
     const user = JSON.parse(localStorage.getItem('user') || '{}')
 
     useEffect(() => {
+        if (!user.user_id) {
+            navigate('/login')
+            return
+        }
         fetchPending()
     }, [])
 
@@ -41,10 +48,27 @@ const HostApproval = () => {
         } catch { }
     }
 
+    const getDeptFloor = (deptName) => {
+        const dept = DEPARTMENTS.find(d => d.name === deptName)
+        return dept ? dept.floor : ''
+    }
+
+    const handleLogout = () => {
+        localStorage.removeItem('user')
+        navigate('/login')
+    }
+
     return (
         <div className="host-page">
-            <h1 className="host-title">Host Approval Panel</h1>
-            <p className="host-subtitle">Review and manage visitor requests directed to you</p>
+            <div className="host-top-bar">
+                <div>
+                    <h1 className="host-title">Host Approval Panel</h1>
+                    <p className="host-subtitle">
+                        Logged in as <strong>{user.full_name || user.username}</strong> &mdash; Review and manage visitor requests
+                    </p>
+                </div>
+                <button className="btn-logout" onClick={handleLogout}>Logout</button>
+            </div>
 
             <div className="host-section">
                 <h2>⏳ Pending Requests ({pendingRequests.length})</h2>
@@ -76,6 +100,10 @@ const HostApproval = () => {
                                         </div>
                                     )}
                                     <div className="detail-row">
+                                        <span className="detail-label">Department:</span>
+                                        <span>{req.visiting_department || req.department || '-'} {req.visiting_department ? `(${getDeptFloor(req.visiting_department)})` : ''}</span>
+                                    </div>
+                                    <div className="detail-row">
                                         <span className="detail-label">Reason:</span>
                                         <span>{req.reason}</span>
                                     </div>
@@ -83,6 +111,12 @@ const HostApproval = () => {
                                         <span className="detail-label">Duration:</span>
                                         <span>{req.duration_days} day{req.duration_days > 1 ? 's' : ''}</span>
                                     </div>
+                                    {req.num_persons > 1 && (
+                                        <div className="detail-row">
+                                            <span className="detail-label">Persons:</span>
+                                            <span>{req.num_persons}</span>
+                                        </div>
+                                    )}
                                     {req.id_proof_type && (
                                         <div className="detail-row">
                                             <span className="detail-label">ID Proof:</span>
